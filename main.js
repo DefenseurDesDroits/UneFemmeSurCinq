@@ -1,0 +1,1 @@
+console.warn('I\'ve become self aware.');

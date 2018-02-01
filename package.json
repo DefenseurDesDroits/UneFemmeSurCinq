@@ -1,0 +1,26 @@
+{
+  "name": "unefemmesurcinq",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "./node_modules/node-sass/bin/node-sass --output-style compressed sass/main.sass > ./main.css && ./node_modules/pugcompiler/pugcompiler.js -o ./",
+    "sass": "./node_modules/node-sass/bin/node-sass --output-style expanded sass/main.sass > ./main.css",
+    "pug": "./node_modules/pugcompiler/pugcompiler.js -o ./",
+    "dev": "./node_modules/node-sass/bin/node-sass --output-style expanded sass/main.sass > ./main.css && ./node_modules/pugcompiler/pugcompiler.js -o ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DefenseurDesDroits/UneFemmeSurCinq.git"
+  },
+  "author": "Yorick <yorick@ctrlaltdev.xyz>",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/DefenseurDesDroits/UneFemmeSurCinq/issues"
+  },
+  "homepage": "https://github.com/DefenseurDesDroits/UneFemmeSurCinq#readme",
+  "dependencies": {
+    "node-sass": "^4.7.2",
+    "pugcompiler": "^1.0.1"
+  }
+}
