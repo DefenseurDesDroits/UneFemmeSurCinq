@@ -1,27 +1,28 @@
+doctype html
 html
   head
     meta(charset="utf-8")
     meta(name="robots", content="noindex")
 
-    title Une femme sur cinq | Défenseur des droits
+    title Victime de harcèlement sexuel au travail ? | Défenseur des droits
 
-    meta(property="og:url", content="https://information.defenseurdesdroits/unefemmesurcinq")
-    meta(property="og:type", content="website")
-    meta(property="og:locale", content="fr_FR")
-    meta(property="og:title", content="Une femme sur cinq | Défenseur des droits")
-    meta(property="og:description", content="Prévenir - Alerter - Réagir")
-    meta(property="og:image", content="https://information.defenseurdesdroits/unefemmesurcinq/img/social.jpg")
-    meta(property="twitter:card", content="summary_large_image")
-    meta(property="twitter:site", content="Defenseurdroits")
+    include inc/opengraph.pug
 
     link(rel="stylesheet", href="main.css")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.1/cookieconsent.min.css")
 
   body
-    header
-      h1
-        a(href="https://www.defenseurdesdroits.fr/", title="Se rendre sur le site du Défenseur des droits")
-          img(src="img/logo.svg" alt="Logo ")
-          | Défenseur des droits
+    include inc/header.pug
+
+    include inc/depliant.pug
+
+    include inc/histoiresvecues.pug
+
+    // include inc/saisir.pug
+
+    include inc/footer.pug
 
     script(src="main.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.1/cookieconsent.min.js")
+    script.
+      window.cookieconsent.initialise({"palette":{"popup":{"background":"#ffffff","text":"#000000"},"button":{"background":"#0080c9","text":"#ffffff"}},"theme":"edgeless","position":"top","static":true,"content":{"message":"Ce site utilise des cookies à des fins statistiques.","dismiss":"OK","link":"En savoir plus","href":"https://www.defenseurdesdroits.fr/mentions-l%C3%A9gales"}});

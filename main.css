@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans:300,400,500,600,700,800,900';
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,500';
 html,
 body,
 div,
@@ -132,9 +132,10 @@ table {
 
 html,
 body {
-  font: 10px "Work Sans", Arial, sans-serif;
+  font: 10px "Roboto", Arial, sans-serif;
   height: 100%;
   width: 100%;
+  font-weight: 300;
 }
 
 h1,
@@ -143,11 +144,228 @@ h3,
 h4,
 h5,
 h6 {
-  font: 160% "Work Sans", Arial, sans-serif;
+  font: 160% "Roboto", Arial, sans-serif;
   line-height: 1;
   text-transform: uppercase;
+  font-weight: 500;
 }
 
 a {
   text-decoration: none;
+}
+
+.flow {
+  width: 100%;
+  max-width: 1040px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  min-height: 600px;
+  box-sizing: border-box;
+  background: no-repeat center/cover url("img/header.jpg");
+}
+
+header #cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 128, 201, 0.25);
+  z-index: 1;
+}
+
+header #content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  box-sizing: border-box;
+  padding: 25px 0;
+}
+
+header .flow {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+header #head {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+
+header #head a#logo {
+  color: transparent;
+  font-size: 0;
+  flex: 1 0 auto;
+}
+
+header #head a#logo img {
+  width: 140px;
+  height: auto;
+}
+
+header #head #hashtag {
+  height: 20px;
+  width: auto;
+  flex: 0 0 auto;
+}
+
+header #head a {
+  margin-left: 10px;
+  flex: 0 0 auto;
+}
+
+header #head a img {
+  height: 25px;
+  width: auto;
+}
+
+header h1 {
+  text-align: right;
+}
+
+header h1 img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+#tagline {
+  background-color: #0080c9;
+  padding: 35px 0;
+  box-sizing: border-box;
+}
+
+#tagline .flow {
+  display: flex;
+  align-items: center;
+}
+
+#tagline .flow img {
+  flex: 1 1 auto;
+  height: 60px;
+}
+
+#tagline .flow img.dash {
+  flex: 1 1 auto;
+  height: 15px;
+}
+
+#CTA-container {
+  background-color: #0080c9;
+  padding: 35px 0;
+  box-sizing: border-box;
+}
+
+#CTA-container h3 {
+  text-align: center;
+  width: 100%;
+  font-size: 3.6em;
+  margin-bottom: 35px;
+}
+
+#CTA-container h3 span {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  line-height: 1.7;
+}
+
+#CTA-container article {
+  display: inline-block;
+  min-width: calc(100% / 4 - 4px);
+  max-width: calc(100% - 1px);
+  width: calc((620px - 100%) * 620);
+  vertical-align: top;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#CTA-container article .icone {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#CTA-container article .icone img {
+  width: 40%;
+  height: auto;
+}
+
+#CTA-container article .method {
+  color: white;
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#CTA-container article .action {
+  color: white;
+  font-size: 1.4em;
+  font-weight: 300;
+}
+
+#CTA-container article .action a {
+  background-color: white;
+  color: #0080c9;
+  padding: 0 15px;
+  border-radius: 3px;
+  font: 22px "Roboto", Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+#CTA-container #CTA {
+  color: white;
+}
+
+footer {
+  background-color: #e3e7eb;
+  margin-top: 20px;
+  padding-top: 40px;
+  font-size: 1.4em;
+}
+
+footer nav {
+  margin: 40px 0;
+}
+
+footer nav ul {
+  margin: 0 auto;
+}
+
+footer nav ul li {
+  padding: 5px 10px;
+  position: relative;
+  display: inline-block;
+  border-right: 1px solid black;
+  border-collapse: collapse;
+}
+
+footer nav ul li img {
+  display: none;
+}
+
+footer nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+footer nav ul li:last-of-type {
+  border-right: none;
+}
+
+footer nav ul #twit img,
+footer nav ul #fab img {
+  width: 30px;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle;
 }

@@ -1,12 +1,12 @@
 // main.sass - the stylesheet of the landing pages
 
 @import reset
-@import 'https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans:300,400,500,600,700,800,900'
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,500'
 
 // @VARIABLES
 
-$bfont: 'Work Sans', Arial, sans-serif
-$hfont: 'Work Sans', Arial, sans-serif
+$bfont: 'Roboto', Arial, sans-serif
+$hfont: 'Roboto', Arial, sans-serif
 
 $blue: rgb(0,128,201)
 $MSP: rgb(0,154,128)
@@ -22,6 +22,7 @@ body
 	font: 10px $bfont
 	height: 100%
 	width: 100%
+	font-weight: 300
 
 h1,
 h2,
@@ -32,7 +33,184 @@ h6
 	font: 160% $hfont
 	line-height: 1
 	text-transform: uppercase
+	font-weight: 500
 
 a
 	text-decoration: none
   
+.flow
+	width: 100%
+	max-width: 1040px
+	box-sizing: border-box
+	padding: 0 10px
+	margin: 0 auto
+
+// ------------------------ @HEADER //////////////////////////////////
+
+header
+	position: relative
+	min-height: 600px
+	box-sizing: border-box
+	background: no-repeat center/cover url('img/header.jpg') 
+
+	#cover
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(0,128,201,0.25)
+		z-index: 1
+	#content
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 2
+		box-sizing: border-box
+		padding: 25px 0
+
+	.flow
+		height: 100%
+		box-sizing: border-box
+
+	#head
+		margin-bottom: 40px
+		display: flex
+		align-items: center
+		a#logo
+			color: transparent
+			font-size: 0
+			flex: 1 0 auto
+			img
+				width: 140px
+				height: auto
+		#hashtag
+			height: 20px
+			width: auto
+			flex: 0 0 auto
+		a
+			margin-left: 10px
+			flex: 0 0 auto
+			img
+				height: 25px
+				width: auto
+	h1
+		text-align: right
+		img
+			width: 100%
+			max-width: 500px
+			height: auto
+
+#tagline
+	background-color: $blue
+	padding: 35px 0
+	box-sizing: border-box
+	.flow
+		display: flex
+		align-items: center
+		img
+			flex: 1 1 auto
+			height: 60px
+		img.dash
+			flex: 1 1 auto
+			height: 15px
+
+// ------------------------ @CTA //////////////////////////////////
+
+#CTA-container
+	background-color: $blue
+	padding: 35px 0
+	box-sizing: border-box
+
+	h3
+		text-align: center
+		width: 100%
+		font-size: 3.6em
+		margin-bottom: 35px
+
+		span
+			padding: 10px 20px
+			background-color: transparent
+			color: white
+			font-weight: bold
+			line-height: 1.7
+
+	article
+		display: inline-block
+		min-width: calc(100% / 4 - 4px)
+		max-width: calc(100% - 1px)
+		width: calc((620px - 100%) * 620)
+		vertical-align: top
+		text-align: center
+		margin-bottom: 50px
+		
+		.icone
+			display: block
+			margin-bottom: 10px
+			
+			img
+				width: 40%
+				height: auto
+		
+		.method
+			color: white
+			font-size: 1.4em
+			font-weight: 600
+			margin-bottom: 10px
+
+		.action
+			color: white
+			font-size: 1.4em
+			font-weight: 300
+
+			a
+				background-color: white
+				color: $blue
+				padding: 0 15px
+				border-radius: 3px
+				font: 22px $hfont
+				text-transform: uppercase
+
+	#CTA
+		color: white
+
+// ------------------------ @FOOTER //////////////////////////////////
+
+footer
+	background-color: $gray
+	margin-top: 20px
+	padding-top: 40px
+	font-size: 1.4em
+
+	nav
+		margin: 40px 0
+
+		ul
+			margin: 0 auto
+
+			li
+				padding: 5px 10px
+				position: relative
+				display: inline-block
+				border-right: 1px solid black
+				border-collapse: collapse
+
+				img
+					display: none
+
+				a
+					color: black
+					text-decoration: none
+
+			li:last-of-type
+				border-right: none
+
+			#twit,
+			#fab
+				img
+					width: 30px
+					display: inline-block
+					margin-right: 5px
+					vertical-align: middle
