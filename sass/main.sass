@@ -82,17 +82,20 @@ header
 		a#logo
 			color: transparent
 			font-size: 0
-			flex: 1 0 auto
+			flex: 1 1 auto
+			width: 140px
 			img
-				width: 140px
 				height: auto
+				min-width: 30px
+				max-width: 140px
 		#hashtag
 			height: 20px
 			width: auto
-			flex: 0 0 auto
+			flex: 0 1 auto
+			margin-left: 10px
 		a
 			margin-left: 10px
-			flex: 0 0 auto
+			flex: 0 1 auto
 			img
 				height: 25px
 				width: auto
@@ -107,15 +110,194 @@ header
 	background-color: $blue
 	padding: 35px 0
 	box-sizing: border-box
+	margin-bottom: 40px
 	.flow
 		display: flex
 		align-items: center
+		justify-content: space-between
 		img
-			flex: 1 1 auto
-			height: 60px
+			flex: 0 1 auto
+			max-height: 50px
+			width: auto
 		img.dash
+			flex: 0 1 auto
+			max-height: 15px
+			width: auto
+
+// ------------------------ @LEAFLET //////////////////////////////////
+
+#identify
+	h2,
+	.subtitle
+		text-align: center
+
+	.dash
+		text-align: center
+		font-size: 5em
+	.blue
+		color: $blue
+
+	article
+		margin: 20px 0
+		h3
+			display: flex
+			align-items: center
+			width: 80%
+			margin: 10px auto
+			font-weight: 300
+			text-transform: unset
+			span.number
+				flex: 0 0 auto
+				width: 40px
+				height: 40px
+				padding: 5px
+				margin-right: 10px
+				color: white
+				font-size: 2em
+				font-weight: 500
+				text-align: center
+				line-height: 40px
+			span.number.blue
+				background-color: $blue
+			span.text
+				flex: 1 1 auto
+			span.text.blue
+				color: $blue
+
+		.content
+			display: flex
+			flex-flow: row wrap
+			justify-content: space-around
+			.col4
+				flex: 1 0 auto
+				width: calc(100% / 4)
+				min-width: 220px
+				margin: 10px
+				p.head
+					text-align: center
+					margin-bottom: 20px
+					img
+						max-height: 100px
+			.col2.text
+				flex: 1 1 auto
+				width: calc(100% - 140px)
+				min-width: 250px
+				margin: 0 20px
+				p
+					margin-bottom: 10px
+				p.important
+					font-weight: 500
+			.col2.img
+				flex: 0 0 auto
+				width: 100px
+				margin-bottom: 20px
+	#identify2
+		.content
+			width: 80%
+			margin: 20px auto
+
+.banner
+	padding: 35px 0
+	box-sizing: border-box
+	margin-bottom: 40px
+	.text
+		color: white
+		padding: 0 20px
+		box-sizing: border-box
+		p
+			margin-bottom: 10px
+		p.important
+			font-weight: 500
+			text-transform: uppercase
+.banner.blue
+	background-color: $blue
+.banner.red
+	background-color: $MLD
+
+#oneoutof5
+	.flow
+		display: flex
+		flex-flow: row wrap
+		.img
+			width: 40%
 			flex: 1 1 auto
-			height: 15px
+			min-width: 250px
+			margin-bottom: 20px
+			padding: 0 20px
+			text-align: right
+			box-sizing: border-box
+			img
+				width: 100%
+				max-width: 420px
+				height: auto
+		.text
+			width: 60% 
+			flex: 1 1 auto
+
+#important
+	.flow
+		.img
+			img
+				width: 250px
+				padding-left: 20px
+				margin-bottom: 10px
+
+#react
+	.flow
+		h2
+			text-align: center
+		.dash
+			text-align: center
+			font-size: 5em
+		.red
+			color: $MLD
+		.row
+			display: flex
+			flex-flow: row wrap
+			.img
+				flex: 1 1 auto
+				width: 400px
+				img
+					width: 100%
+					height: auto
+			article.text
+				flex: 1 1 auto
+				width: 400px
+				margin: 20px 0
+				h3
+					display: flex
+					align-items: center
+					width: 80%
+					margin: 10px auto
+					font-weight: 300
+					text-transform: unset
+					span.number
+						flex: 0 0 auto
+						width: 40px
+						height: 40px
+						padding: 5px
+						margin-right: 10px
+						color: white
+						font-size: 2em
+						font-weight: 500
+						text-align: center
+						line-height: 40px
+					span.number.red
+						background-color: $MLD
+					span.text
+						flex: 1 1 auto
+					span.text.red
+						color: $MLD
+				p
+					width: 80%
+					margin: 10px auto
+
+		@media screen and (min-width: 800px)
+			.row.reverse
+				.img
+					order: 2
+				article.text
+					order: 1
 
 // ------------------------ @CTA //////////////////////////////////
 
