@@ -613,12 +613,19 @@ header h1 img {
 
 #testimony .flow h2 {
   text-align: center;
+  margin-top: 100px;
 }
 
 #testimony .flow h2 img {
   max-width: 800px;
   width: calc(100% - 40px);
   height: auto;
+}
+
+@media screen and (min-width: 800px) {
+  #testimony .flow h2 {
+    margin-top: 160px;
+  }
 }
 
 #testimony .flow .subtitle {
@@ -683,6 +690,133 @@ header h1 img {
   #testimony .flow .row.reverse article.text {
     order: 1;
   }
+}
+
+#jury .flow {
+  color: white;
+}
+
+#jury .flow h2,
+#jury .flow .subtitle,
+#jury .flow .dash {
+  text-align: center;
+}
+
+#jury .flow .dash.white {
+  color: white;
+  font-weight: 500;
+  font-size: 5em;
+}
+
+#jury .flow .content {
+  margin: 40px 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#jury .flow .content .col3 {
+  flex: 1 0 auto;
+  width: calc(100% / 3 - 20px);
+  min-width: 220px;
+  margin: 10px;
+}
+
+#jury .flow .content .col3 .dash {
+  text-align: left;
+  font-size: 1.8em;
+}
+
+#jury .flow .content .col3 p.head {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#jury .flow .content .col3 p.head img {
+  width: 100%;
+}
+
+#jury .flow .content .col3 p.important {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+#videos .flow h2,
+#videos .flow .dash {
+  text-align: center;
+}
+
+#videos .flow .dash {
+  font-weight: 500;
+  font-size: 5em;
+}
+
+#videos .flow .dash.blue {
+  color: #0080c9;
+}
+
+#videos .flow .content {
+  margin: 40px 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#videos .flow .content .col3 {
+  flex: 1 0 auto;
+  width: calc(100% / 3 - 20px);
+  min-width: 220px;
+  margin: 10px;
+}
+
+#videos .flow .content .col3 .dash {
+  text-align: left;
+  font-size: 1.8em;
+}
+
+#videos .flow .content .col3 p.head {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#videos .flow .content .col3 p.head iframe {
+  width: 100%;
+}
+
+#videos .flow .content .col3 p.important {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+#opinion.banner .flow .content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#opinion.banner .flow .content .col2.text {
+  flex: 1 1 auto;
+  width: calc(100% - 140px);
+  min-width: 250px;
+  margin: 0 20px;
+  color: #000000;
+}
+
+#opinion.banner .flow .content .col2.text p {
+  margin-bottom: 10px;
+}
+
+#opinion.banner .flow .content .col2.text p a {
+  text-transform: uppercase;
+  border-bottom: #0080c9 solid 2px;
+}
+
+#opinion.banner .flow .content .col2.text p.important {
+  font-weight: 500;
+}
+
+#opinion.banner .flow .content .col2.img {
+  flex: 0 0 auto;
+  width: 100px;
+  margin-bottom: 20px;
 }
 
 #CTA-container {

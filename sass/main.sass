@@ -382,10 +382,14 @@ header
 	.flow
 		h2
 			text-align: center
+			margin-top: 100px
 			img
 				max-width: 800px
 				width: calc(100% - 40px)
-				height: auto 
+				height: auto
+		@media screen and (min-width: 800px)
+			h2
+				margin-top: 160px
 		.subtitle
 			text-align: center
 			margin-bottom: 20px
@@ -430,6 +434,104 @@ header
 					order: 2
 				article.text
 					order: 1
+
+// ------------------------ @JURY //////////////////////////////////
+
+#jury
+	.flow
+		color: white
+		h2,
+		.subtitle,
+		.dash
+			text-align: center
+		.dash.white
+			color: white
+			font-weight: 500
+			font-size: 5em
+
+		.content
+			margin: 40px 0
+			display: flex
+			flex-flow: row wrap
+			.col3
+				flex: 1 0 auto
+				width: calc(100% / 3 - 20px)
+				min-width: 220px
+				margin: 10px
+				.dash
+					text-align: left
+					font-size: 1.8em
+				p.head
+					text-align: center
+					margin-bottom: 20px
+					img
+						width: 100%
+				p.important
+					text-transform: uppercase
+					font-weight: 500
+
+// ------------------------ @videos //////////////////////////////////
+
+#videos
+	.flow
+		h2,
+		.dash
+			text-align: center
+
+		.dash
+			font-weight: 500
+			font-size: 5em
+		.dash.blue
+			color: $blue
+
+		.content
+			margin: 40px 0
+			display: flex
+			flex-flow: row wrap
+			.col3
+				flex: 1 0 auto
+				width: calc(100% / 3 - 20px)
+				min-width: 220px
+				margin: 10px
+				.dash
+					text-align: left
+					font-size: 1.8em
+				p.head
+					text-align: center
+					margin-bottom: 20px
+					iframe
+						width: 100%
+				p.important
+					text-transform: uppercase
+					font-weight: 500
+
+// ------------------------ @videos //////////////////////////////////
+
+#opinion.banner
+	.flow
+		.content
+			display: flex
+			flex-flow: row wrap
+			justify-content: space-around
+			.col2.text
+				flex: 1 1 auto
+				width: calc(100% - 140px)
+				min-width: 250px
+				margin: 0 20px
+				color: #000000
+				p
+					margin-bottom: 10px
+					a
+						text-transform: uppercase
+						border-bottom: $blue solid 2px
+				p.important
+					font-weight: 500
+			.col2.img
+				flex: 0 0 auto
+				width: 100px
+				margin-bottom: 20px
+
+
 // ------------------------ @CTA //////////////////////////////////
 
 #CTA-container
