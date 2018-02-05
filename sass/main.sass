@@ -19,7 +19,7 @@ $gray: rgb(227,231,235)
 // @GLOBAL
 html,
 body
-	font: 10px $bfont
+	font: 14px $bfont
 	height: 100%
 	width: 100%
 	font-weight: 300
@@ -35,8 +35,19 @@ h6
 	text-transform: uppercase
 	font-weight: 500
 
+h2
+	font-size: 240%
+
+p.subtitle
+	font-size: 180%
+
 a
 	text-decoration: none
+
+hr.clear
+	clear: both
+	height: 0px
+	border: none
   
 .flow
 	width: 100%
@@ -132,6 +143,7 @@ header
 		text-align: center
 
 	.dash
+		font-weight: 500
 		text-align: center
 		font-size: 5em
 	.blue
@@ -153,7 +165,7 @@ header
 				padding: 5px
 				margin-right: 10px
 				color: white
-				font-size: 2em
+				font-size: 1.8em
 				font-weight: 500
 				text-align: center
 				line-height: 40px
@@ -170,7 +182,7 @@ header
 			justify-content: space-around
 			.col4
 				flex: 1 0 auto
-				width: calc(100% / 4)
+				width: calc(100% / 4 - 20px)
 				min-width: 220px
 				margin: 10px
 				p.head
@@ -244,9 +256,11 @@ header
 
 #react
 	.flow
+		max-width: 1200px
 		h2
 			text-align: center
 		.dash
+			font-weight: 500
 			text-align: center
 			font-size: 5em
 		.red
@@ -267,7 +281,7 @@ header
 				h3
 					display: flex
 					align-items: center
-					width: 80%
+					width: calc(100% - 60px)
 					margin: 10px auto
 					font-weight: 300
 					text-transform: unset
@@ -278,7 +292,7 @@ header
 						padding: 5px
 						margin-right: 10px
 						color: white
-						font-size: 2em
+						font-size: 1.8em
 						font-weight: 500
 						text-align: center
 						line-height: 40px
@@ -288,10 +302,13 @@ header
 						flex: 1 1 auto
 					span.text.red
 						color: $MLD
-				p
-					width: 80%
+				ul
+					width: calc(100% - 60px)
 					margin: 10px auto
-
+					list-style: disc inside
+					li
+						margin-bottom: 10px
+						padding-left: 65px
 		@media screen and (min-width: 800px)
 			.row.reverse
 				.img
@@ -299,6 +316,120 @@ header
 				article.text
 					order: 1
 
+#help
+	h2,
+	.subtitle
+		text-align: center
+
+	.dash
+		font-weight: 500
+		text-align: center
+		font-size: 5em
+	.blue
+		color: $blue
+	
+	ul
+		display: flex
+		flex-flow: row wrap
+		justify-content: space-around
+		margin-bottom: 40px
+
+		li
+			flex: 1 1 auto
+			width: 300px
+			text-align: center
+			margin: 20px 0
+			img
+				display: block
+				width: 25px
+				height: auto
+				margin: 10px auto
+
+#victim
+	.flow
+		margin-bottom: 40px
+		h2,
+		.subtitle
+			text-align: center
+
+		.dash
+			font-weight: 500
+			text-align: center
+			font-size: 5em
+		.red
+			color: $MLD
+
+		ul
+			display: flex
+			flex-flow: row wrap
+			justify-content: space-around
+			margin-bottom: 20px
+
+			li
+				flex: 1 1 auto
+				width: 220px
+				text-align: center
+				margin: 20px 0
+				img
+					display: block
+					height: 80px
+					width: auto
+					margin: 10px auto
+
+// ------------------------ @STORIES //////////////////////////////////
+
+#testimony
+	.flow
+		h2
+			text-align: center
+			img
+				max-width: 800px
+				width: calc(100% - 40px)
+				height: auto 
+		.subtitle
+			text-align: center
+			margin-bottom: 20px
+
+		.dash
+			font-weight: 500
+			text-align: center
+			font-size: 5em
+		.blue
+			color: $blue
+
+		.row
+			display: flex
+			flex-flow: row wrap
+			.img
+				flex: 1 1 auto
+				width: 400px
+				img
+					width: 100%
+					height: auto
+			article.text
+				flex: 1 1 auto
+				width: 400px
+				margin: 20px 0
+				h3
+					width: calc(100% - 60px)
+					margin: 10px auto
+				.dash
+					font-weight: 500
+					width: calc(100% - 60px)
+					text-align: left
+					font-size: 2em
+					margin: auto
+				p
+					width: calc(100% - 60px)
+					margin: 10px auto
+					list-style: disc inside
+
+		@media screen and (min-width: 800px)
+			.row.reverse
+				.img
+					order: 2
+				article.text
+					order: 1
 // ------------------------ @CTA //////////////////////////////////
 
 #CTA-container
@@ -363,8 +494,8 @@ header
 footer
 	background-color: $gray
 	margin-top: 20px
-	padding-top: 40px
-	font-size: 1.4em
+	padding: 40px 0
+	font-size: 120%
 
 	nav
 		margin: 40px 0

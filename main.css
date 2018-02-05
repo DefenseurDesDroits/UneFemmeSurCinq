@@ -132,7 +132,7 @@ table {
 
 html,
 body {
-  font: 10px "Roboto", Arial, sans-serif;
+  font: 14px "Roboto", Arial, sans-serif;
   height: 100%;
   width: 100%;
   font-weight: 300;
@@ -150,8 +150,22 @@ h6 {
   font-weight: 500;
 }
 
+h2 {
+  font-size: 240%;
+}
+
+p.subtitle {
+  font-size: 180%;
+}
+
 a {
   text-decoration: none;
+}
+
+hr.clear {
+  clear: both;
+  height: 0px;
+  border: none;
 }
 
 .flow {
@@ -272,6 +286,7 @@ header h1 img {
 }
 
 #identify .dash {
+  font-weight: 500;
   text-align: center;
   font-size: 5em;
 }
@@ -300,7 +315,7 @@ header h1 img {
   padding: 5px;
   margin-right: 10px;
   color: white;
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: 500;
   text-align: center;
   line-height: 40px;
@@ -326,7 +341,7 @@ header h1 img {
 
 #identify article .content .col4 {
   flex: 1 0 auto;
-  width: calc(100% / 4);
+  width: calc(100% / 4 - 20px);
   min-width: 220px;
   margin: 10px;
 }
@@ -427,11 +442,16 @@ header h1 img {
   margin-bottom: 10px;
 }
 
+#react .flow {
+  max-width: 1200px;
+}
+
 #react .flow h2 {
   text-align: center;
 }
 
 #react .flow .dash {
+  font-weight: 500;
   text-align: center;
   font-size: 5em;
 }
@@ -464,7 +484,7 @@ header h1 img {
 #react .flow .row article.text h3 {
   display: flex;
   align-items: center;
-  width: 80%;
+  width: calc(100% - 60px);
   margin: 10px auto;
   font-weight: 300;
   text-transform: unset;
@@ -477,7 +497,7 @@ header h1 img {
   padding: 5px;
   margin-right: 10px;
   color: white;
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: 500;
   text-align: center;
   line-height: 40px;
@@ -495,9 +515,15 @@ header h1 img {
   color: #d02632;
 }
 
-#react .flow .row article.text p {
-  width: 80%;
+#react .flow .row article.text ul {
+  width: calc(100% - 60px);
   margin: 10px auto;
+  list-style: disc inside;
+}
+
+#react .flow .row article.text ul li {
+  margin-bottom: 10px;
+  padding-left: 65px;
 }
 
 @media screen and (min-width: 800px) {
@@ -505,6 +531,156 @@ header h1 img {
     order: 2;
   }
   #react .flow .row.reverse article.text {
+    order: 1;
+  }
+}
+
+#help h2,
+#help .subtitle {
+  text-align: center;
+}
+
+#help .dash {
+  font-weight: 500;
+  text-align: center;
+  font-size: 5em;
+}
+
+#help .blue {
+  color: #0080c9;
+}
+
+#help ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+#help ul li {
+  flex: 1 1 auto;
+  width: 300px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+#help ul li img {
+  display: block;
+  width: 25px;
+  height: auto;
+  margin: 10px auto;
+}
+
+#victim .flow {
+  margin-bottom: 40px;
+}
+
+#victim .flow h2,
+#victim .flow .subtitle {
+  text-align: center;
+}
+
+#victim .flow .dash {
+  font-weight: 500;
+  text-align: center;
+  font-size: 5em;
+}
+
+#victim .flow .red {
+  color: #d02632;
+}
+
+#victim .flow ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+#victim .flow ul li {
+  flex: 1 1 auto;
+  width: 220px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+#victim .flow ul li img {
+  display: block;
+  height: 80px;
+  width: auto;
+  margin: 10px auto;
+}
+
+#testimony .flow h2 {
+  text-align: center;
+}
+
+#testimony .flow h2 img {
+  max-width: 800px;
+  width: calc(100% - 40px);
+  height: auto;
+}
+
+#testimony .flow .subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#testimony .flow .dash {
+  font-weight: 500;
+  text-align: center;
+  font-size: 5em;
+}
+
+#testimony .flow .blue {
+  color: #0080c9;
+}
+
+#testimony .flow .row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#testimony .flow .row .img {
+  flex: 1 1 auto;
+  width: 400px;
+}
+
+#testimony .flow .row .img img {
+  width: 100%;
+  height: auto;
+}
+
+#testimony .flow .row article.text {
+  flex: 1 1 auto;
+  width: 400px;
+  margin: 20px 0;
+}
+
+#testimony .flow .row article.text h3 {
+  width: calc(100% - 60px);
+  margin: 10px auto;
+}
+
+#testimony .flow .row article.text .dash {
+  font-weight: 500;
+  width: calc(100% - 60px);
+  text-align: left;
+  font-size: 2em;
+  margin: auto;
+}
+
+#testimony .flow .row article.text p {
+  width: calc(100% - 60px);
+  margin: 10px auto;
+  list-style: disc inside;
+}
+
+@media screen and (min-width: 800px) {
+  #testimony .flow .row.reverse .img {
+    order: 2;
+  }
+  #testimony .flow .row.reverse article.text {
     order: 1;
   }
 }
@@ -579,8 +755,8 @@ header h1 img {
 footer {
   background-color: #e3e7eb;
   margin-top: 20px;
-  padding-top: 40px;
-  font-size: 1.4em;
+  padding: 40px 0;
+  font-size: 120%;
 }
 
 footer nav {
