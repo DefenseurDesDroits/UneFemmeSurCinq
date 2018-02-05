@@ -746,6 +746,10 @@ header h1 img {
   font-weight: 500;
 }
 
+#videos {
+  margin-top: 60px;
+}
+
 #videos .flow h2,
 #videos .flow .dash {
   text-align: center;
