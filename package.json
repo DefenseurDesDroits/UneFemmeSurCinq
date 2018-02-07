@@ -4,10 +4,10 @@
   "description": "",
   "private": true,
   "scripts": {
-    "start": "./node_modules/node-sass/bin/node-sass --output-style compressed sass/main.sass > ./main.css && ./node_modules/pugcompiler/pugcompiler.js -o ./",
+    "start": "./node_modules/node-sass/bin/node-sass --output-style compressed sass/main.sass > ./main.css && ./node_modules/pug-cli/index.js -o ./ pug/index.pug",
     "sass": "./node_modules/node-sass/bin/node-sass --output-style expanded sass/main.sass > ./main.css",
-    "pug": "./node_modules/pugcompiler/pugcompiler.js -o ./",
-    "dev": "./node_modules/node-sass/bin/node-sass --output-style expanded sass/main.sass > ./main.css && ./node_modules/pugcompiler/pugcompiler.js -o ./"
+    "pug": "./node_modules/pug-cli/index.js -o ./ -P pug/index.pug",
+    "dev": "./node_modules/node-sass/bin/node-sass --output-style expanded sass/main.sass > ./main.css && ./node_modules/pug-cli/index.js -o ./ -P pug/index.pug"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,6 @@
   "homepage": "https://github.com/DefenseurDesDroits/UneFemmeSurCinq#readme",
   "dependencies": {
     "node-sass": "^4.7.2",
-    "pugcompiler": "^1.0.1"
+    "pug-cli": "^1.0.0-alpha6"
   }
 }
