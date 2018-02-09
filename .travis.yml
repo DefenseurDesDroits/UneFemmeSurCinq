@@ -1,0 +1,3 @@
+language: noje_js
+node_js:
+  - "lts/*"
