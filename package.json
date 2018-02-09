@@ -1,7 +1,7 @@
 {
   "name": "unefemmesurcinq",
   "version": "1.0.0",
-  "description": "",
+  "description": "Communication campaign landing page",
   "private": true,
   "scripts": {
     "start": "./node_modules/node-sass/bin/node-sass --output-style compressed sass/main.sass > ./main.css && ./node_modules/pug-cli/index.js -o ./ pug/index.pug",
