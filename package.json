@@ -1,10 +1,11 @@
 {
   "name": "unefemmesurcinq",
   "version": "1.0.0",
-  "description": "",
+  "description": "Communication campaign landing page",
   "private": true,
   "scripts": {
     "start": "./node_modules/node-sass/bin/node-sass --output-style compressed sass/main.sass > ./main.css && ./node_modules/pug-cli/index.js -o ./ pug/index.pug",
+    "test": "./node_modules/node-sass/bin/node-sass --output-style nested sass/main.sass > ./main.css && ./node_modules/pug-cli/index.js -o -P ./ pug/index.pug",
     "sass": "./node_modules/node-sass/bin/node-sass --output-style expanded sass/main.sass > ./main.css",
     "pug": "./node_modules/pug-cli/index.js -o ./ -P pug/index.pug",
     "dev": "./node_modules/node-sass/bin/node-sass --output-style expanded sass/main.sass > ./main.css && ./node_modules/pug-cli/index.js -o ./ -P pug/index.pug"
