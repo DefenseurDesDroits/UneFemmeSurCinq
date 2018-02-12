@@ -6,6 +6,8 @@ html
 
     title Victime de harcèlement sexuel au travail ? | Défenseur des droits
 
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+
     include inc/GTM.pug
     include inc/opengraph.pug
 
@@ -14,9 +16,18 @@ html
 
   body
     include inc/GTMI.pug
+
+    include inc/menu.pug
+    
     include inc/header.pug
 
     include inc/leaflet.pug
+
+    include inc/saisir.pug
+
+    include inc/opinion.pug
+
+    include inc/attachments.pug
 
     include inc/testimonies.pug
 
@@ -24,13 +35,9 @@ html
 
     include inc/jury.pug
 
-    include inc/opinion.pug
-
-    // include inc/saisir.pug
-
     include inc/footer.pug
 
     script(src="main.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.1/cookieconsent.min.js")
     script.
-      window.cookieconsent.initialise({"palette":{"popup":{"background":"#ffffff","text":"#000000"},"button":{"background":"#0080c9","text":"#ffffff"}},"theme":"edgeless","position":"top","static":true,"content":{"message":"Ce site utilise des cookies à des fins statistiques.","dismiss":"OK","link":"En savoir plus","href":"https://www.defenseurdesdroits.fr/mentions-l%C3%A9gales"}});
+      window.cookieconsent.initialise({"palette":{"popup":{"background":"#ffffff","text":"#000000"},"button":{"background":"#0080c9","text":"#ffffff"}},"theme":"edgeless","position":"bottom","static":false,"content":{"message":"Ce site utilise des cookies à des fins statistiques.","dismiss":"OK","link":"En savoir plus","href":"https://www.defenseurdesdroits.fr/mentions-l%C3%A9gales"}});
