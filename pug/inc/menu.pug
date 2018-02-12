@@ -1,0 +1,10 @@
+- var anchors = [{name:"Dépliant",link:"identify"},{name:"Saisir le Défenseur des droits",link:"CTA-container"},{name:"Documents",link:"opinion"},{name:"Histoire vécues",link:"testimony"},{name:"Concours courts métrages",link:"videos"}];
+#menu.closed
+  img(src="img/signature_white.svg", alt="Défenseur des droits")#signature
+  button.burger.close(title="Fermer le menu")
+    include ../../img/burger.svg
+  nav
+    ul
+      each anchor in anchors
+        li
+          a(href="#"+anchor.link)= anchor.name

@@ -62,6 +62,140 @@ hr.clear
 	height: 0
 	width: 0
 
+.svg-menu-toggle
+	fill: #FFFFFF
+	pointer-events: all
+	cursor: pointer
+	.bar
+		-webkit-transform: rotate(0) translateY(0) translateX(0)
+		transform: rotate(0) translateY(0) translateX(0)
+		opacity: 1
+		-webkit-transform-origin: 20px 10px
+		transform-origin: 20px 10px
+		-webkit-transition: -webkit-transform 0.4s ease-in-out, opacity 0.2s ease-in-out
+		transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out
+	.bar:nth-of-type(1)
+		-webkit-transform-origin: 20px 10px
+		transform-origin: 20px 10px
+	.bar:nth-of-type(3)
+		-webkit-transform-origin: 20px 20px
+		transform-origin: 20px 20px
+.close
+	.svg-menu-toggle
+		.bar:nth-of-type(1)
+			-webkit-transform: rotate(-45deg) translateY(0) translateX(0)
+			transform: rotate(-45deg) translateY(0) translateX(0)
+		.bar:nth-of-type(2)
+			opacity: 0
+		.bar:nth-of-type(3)
+			-webkit-transform: rotate(45deg) translateY(0em) translateX(0em)
+			transform: rotate(45deg) translateY(0em) translateX(0em)
+.inline-svg
+	display: block
+	margin: 0 auto
+
+// ------------------------ @INTRO //////////////////////////////////
+
+#intro
+	.flow
+		p
+			font-size: 180%
+
+// ------------------------ @MENU //////////////////////////////////
+
+#topbar
+	position: fixed
+	top: 0
+	right: 0
+	width: 50px
+	height: 50px
+	background-color: $blue
+	display: flex
+	align-items: center
+	#toplogo,
+	#tophashtag
+		display: none
+
+#topbar.hide,
+.burger.hide
+	display: none
+
+@media screen and (max-width: 800px)
+	#topbar
+		width: 100%
+		#toplogo
+			display: block
+			color: transparent
+			font-size: 0
+			flex: 0 1 auto
+			width: 40px
+			margin: 0 20px
+			img
+				height: auto
+				width: 40px
+		#tophashtag
+			display: block
+			max-height: 20px
+			width: 50vw
+			margin-left: calc(25vw - 80px)
+			flex: 0 1 auto
+	#topbar.top
+		#toplogo,
+		#tophashtag
+			display: none
+
+.burger
+	position: fixed
+	top: 0
+	right: -15px
+	background-color: transparent
+	border: none
+	text-align: center
+	cursor: pointer
+	svg
+		width: 50px
+		height: auto
+
+#menu
+	position: fixed
+	z-index: 99999
+	top: 0
+	right: 0
+	height: 100%
+	width: 600px
+	background-color: rgba(0,128,201,0.75)
+	.burger
+		.svg-menu-toggle
+			fill: #FFFFFF
+	#signature
+		display: block
+		position: absolute
+		bottom: 20px
+		left: calc(50% - 125px)
+		max-width: 250px
+		height: auto
+	nav
+		margin: 0 auto
+		max-width: 400px
+		padding: 20px
+		ul
+			margin-top: 70px
+			li
+				font-size: 1.6em
+				text-transform: uppercase
+				font-weight: 500
+				margin: 20px 0
+				a
+					text-decoration: none
+					color: white
+#menu.closed
+	display: none
+
+@media screen and (max-width: 800px)
+	#menu
+		width: 100%
+		background-color: rgba(0,128,201,1)
+
 // ------------------------ @HEADER //////////////////////////////////
 
 header
@@ -122,6 +256,10 @@ header
 			width: 100%
 			max-width: 500px
 			height: auto
+
+@media screen and (max-width: 800px)
+	header
+		margin-top: 50px
 
 #tagline
 	background-color: $blue
@@ -388,14 +526,14 @@ header
 	.flow
 		h2
 			text-align: center
-			margin-top: 100px
+			margin-top: 20px
 			img
 				max-width: 800px
 				width: calc(100% - 40px)
 				height: auto
 		@media screen and (min-width: 800px)
 			h2
-				margin-top: 160px
+				margin-top: 20px
 		.subtitle
 			text-align: center
 			margin-bottom: 20px
@@ -480,7 +618,7 @@ header
 					text-transform: uppercase
 					font-weight: 500
 
-// ------------------------ @videos //////////////////////////////////
+// ------------------------ @VIDEOS //////////////////////////////////
 
 #videos
 	margin-top: 60px
@@ -516,7 +654,7 @@ header
 					text-transform: uppercase
 					font-weight: 500
 
-// ------------------------ @videos //////////////////////////////////
+// ------------------------ @OPINION //////////////////////////////////
 
 #opinion.banner
 	.flow
@@ -543,6 +681,32 @@ header
 				width: 100px
 				margin-bottom: 20px
 
+// ------------------------ @ATTACHMENTS //////////////////////////////////
+
+#attachments.banner
+	.flow
+		.content
+			display: flex
+			flex-flow: row wrap
+			justify-content: space-around
+			.col2.text
+				flex: 1 1 auto
+				width: calc(100% - 140px)
+				min-width: 250px
+				margin: 0 20px
+				color: #000000
+				p
+					margin-bottom: 10px
+					a
+						color: #000000
+						text-transform: uppercase
+						border-bottom: $blue solid 2px
+				p.important
+					font-weight: 500
+			.col2.img
+				flex: 0 0 auto
+				width: 60px
+				margin-bottom: 20px
 
 // ------------------------ @CTA //////////////////////////////////
 
