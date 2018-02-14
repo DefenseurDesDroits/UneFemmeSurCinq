@@ -14,6 +14,13 @@ function topBarToggle() {
   }
 }
 
+function videoSizing() {
+  let vid = document.querySelector('#shortvideo iframe');
+  let vidw = vid.clientWidth;
+  let vidh = vidw * 9 / 16;
+  vid.style.height = vidh + 'px';
+}
+
 document.querySelector('#menu .burger.close').addEventListener('click', activateBurger);
 document.querySelector('header .burger').addEventListener('click', activateBurger);
 
@@ -23,3 +30,7 @@ var menulinks = document.querySelectorAll('#menu li a');
 [].forEach.call(menulinks, (link) => {
   link.addEventListener('click', activateBurger);
 });
+
+window.addEventListener('resize', videoSizing);
+
+videoSizing();
