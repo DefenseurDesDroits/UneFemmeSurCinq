@@ -265,7 +265,6 @@ header
 	background-color: $blue
 	padding: 35px 0
 	box-sizing: border-box
-	margin-bottom: 40px
 	.flow
 		display: flex
 		align-items: center
@@ -370,7 +369,7 @@ header
 .banner.red
 	background-color: $MLD
 
-#oneoutof5
+/* #oneoutof5
 	.flow
 		display: flex
 		flex-flow: row wrap
@@ -388,7 +387,20 @@ header
 				height: auto
 		.text
 			width: 60% 
-			flex: 1 1 auto
+			flex: 1 1 auto */
+
+#oneoutof5
+	.flow
+		max-width: 800px 
+		p.important
+			color: $blue
+			font-size: 1.8em
+			text-transform: uppercase
+			margin-bottom: 10px
+			font-weight: 500
+		p
+			font-size: 1.4em
+			color: black
 
 #important
 	.flow
@@ -526,7 +538,7 @@ header
 	.flow
 		h2
 			text-align: center
-			margin-top: 20px
+			margin-top: 40px
 			img
 				max-width: 800px
 				width: calc(100% - 40px)
@@ -620,8 +632,22 @@ header
 
 // ------------------------ @VIDEOS //////////////////////////////////
 
+#shortvideo
+	margin-top: 120px
+	.flow
+	h2,
+	.dash
+		text-align: center
+
+	.dash
+		font-weight: 500
+		font-size: 5em
+	.dash.blue
+		color: $blue
+	iframe
+		width: 100%
 #videos
-	margin-top: 60px
+	margin-top: 20px
 	.flow
 		h2,
 		.dash
@@ -654,9 +680,19 @@ header
 					text-transform: uppercase
 					font-weight: 500
 
+// ------------------------ @MORE //////////////////////////////////
+
+#more
+	.flow
+		h2
+			text-align: center
+
+
 // ------------------------ @OPINION //////////////////////////////////
 
 #opinion.banner
+	margin-bottom: 0
+	padding-bottom: 10px
 	.flow
 		.content
 			display: flex
@@ -684,6 +720,7 @@ header
 // ------------------------ @ATTACHMENTS //////////////////////////////////
 
 #attachments.banner
+	padding-top: 10px
 	.flow
 		.content
 			display: flex
@@ -708,6 +745,50 @@ header
 				width: 60px
 				margin-bottom: 20px
 
+// ------------------------ @LEGALPOINTS //////////////////////////////////
+
+#legalpoints
+	margin: 40px 0
+	.flow
+		h2
+			text-align: center
+		.dash
+			font-weight: 500
+			text-align: center
+			font-size: 5em
+		.blue
+			color: $blue
+		.row
+			display: flex
+			flex-flow: row wrap
+			align-items: center
+			.colimg
+				flex: 1 1 auto
+				width: 20%
+				margin: 20px
+				text-align: center
+				img
+					width: 100%
+					max-width: 60vw
+					height: auto
+			.coltext
+				flex: 1 1 auto
+				width: 520px
+				margin: 20px
+				h3
+				p
+					margin: 10px auto
+		@media screen and (min-width: 800px)
+			.row.reverse
+				.colimg
+					order: 2
+				.coltext
+					order: 1
+					h3,
+					p
+						text-align: right
+
+
 // ------------------------ @CTA //////////////////////////////////
 
 #CTA-container
@@ -715,11 +796,10 @@ header
 	padding: 35px 0
 	box-sizing: border-box
 
-	h3
-		text-align: center
-		width: 100%
-		font-size: 3.6em
+	h2
 		margin-bottom: 35px
+		color: white
+		text-align: center
 
 		span
 			padding: 10px 20px
@@ -766,6 +846,47 @@ header
 
 	#CTA
 		color: white
+
+#contacts
+	.flow
+		h2
+			text-align: center
+			margin: 40px 0
+		article
+			display: inline-block
+			min-width: calc(100% / 3 - 3px)
+			max-width: calc(100% - 1px)
+			width: calc((620px - 100%) * 620)
+			vertical-align: top
+			text-align: center
+			margin-bottom: 50px
+			
+			.icone
+				display: block
+				margin-bottom: 10px
+				
+				img
+					width: 40%
+					height: auto
+			
+			.method
+				color: black
+				font-size: 1.4em
+				font-weight: 600
+				margin-bottom: 10px
+
+			.action
+				color: black
+				font-size: 1.4em
+				font-weight: 300
+
+				a
+					background-color: $MLD
+					color: white
+					padding: 0 15px
+					border-radius: 3px
+					font: 22px $hfont
+					text-transform: uppercase
 
 // ------------------------ @FOOTER //////////////////////////////////
 
