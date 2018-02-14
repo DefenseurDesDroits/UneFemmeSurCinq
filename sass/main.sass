@@ -163,7 +163,7 @@ hr.clear
 	right: 0
 	height: 100%
 	width: 600px
-	background-color: rgba(0,128,201,0.75)
+	background-color: rgba(0,128,201,0.85)
 	.burger
 		.svg-menu-toggle
 			fill: #FFFFFF
@@ -263,7 +263,7 @@ header
 
 #tagline
 	background-color: $blue
-	padding: 35px 0
+	padding: 35px 0 0
 	box-sizing: border-box
 	.flow
 		display: flex
@@ -391,16 +391,16 @@ header
 
 #oneoutof5
 	.flow
-		max-width: 800px 
 		p.important
-			color: $blue
+			color: white
 			font-size: 1.8em
 			text-transform: uppercase
 			margin-bottom: 10px
 			font-weight: 500
 		p
 			font-size: 1.4em
-			color: black
+			color: white
+			text-align: center
 
 #important
 	.flow
@@ -409,6 +409,10 @@ header
 				width: 250px
 				padding-left: 20px
 				margin-bottom: 10px
+		p.important
+			font-size: 1.8em
+		p
+			font-size: 1.4em
 
 #react
 	.flow
@@ -424,6 +428,7 @@ header
 		.row
 			display: flex
 			flex-flow: row wrap
+			align-items: center
 			.img
 				flex: 1 1 auto
 				width: 400px
@@ -495,11 +500,14 @@ header
 			width: 300px
 			text-align: center
 			margin: 20px 0
+			font-size: 1.2em
 			img
 				display: block
-				width: 25px
+				width: 15px
 				height: auto
 				margin: 10px auto
+		li.important
+			font-weight: 500
 
 #victim
 	.flow
@@ -526,6 +534,7 @@ header
 				width: 220px
 				text-align: center
 				margin: 20px 0
+				font-size: 1.2em
 				img
 					display: block
 					height: 80px
@@ -560,6 +569,7 @@ header
 		.row
 			display: flex
 			flex-flow: row wrap
+			align-items: center
 			.img
 				flex: 1 1 auto
 				width: 400px
@@ -576,7 +586,7 @@ header
 				.dash
 					font-weight: 500
 					width: calc(100% - 60px)
-					text-align: left
+					text-align: unset
 					font-size: 2em
 					margin: auto
 				p
@@ -594,41 +604,59 @@ header
 					order: 2
 				article.text
 					order: 1
+					text-align: right
+				.dash
+					text-align: right
 
 // ------------------------ @JURY //////////////////////////////////
 
 #jury
 	.flow
-		color: white
 		h2,
 		.subtitle,
 		.dash
 			text-align: center
-		.dash.white
-			color: white
 			font-weight: 500
+		.dash
 			font-size: 5em
-
 		.content
 			margin: 0 0 40px
-			display: flex
-			flex-flow: row wrap
-			.col3
-				flex: 1 0 auto
-				width: calc(100% / 3 - 20px)
-				min-width: 220px
-				margin: 10px
-				.dash
-					text-align: left
-					font-size: 1.8em
+			article
+				display: flex
+				flex-flow: row wrap
+				margin: 20px
 				p.head
+					flex: 1 1 auto
 					text-align: center
+					width: calc(20% - 40px)
 					margin-bottom: 20px
 					img
-						width: 100%
-				p.important
-					text-transform: uppercase
-					font-weight: 500
+						max-width: 100%
+				.text
+					flex: 1 1 auto
+					width: 600px
+					color: black
+					.dash
+						text-align: left
+						font-size: 1.8em
+						color: black
+					p.important
+						text-transform: uppercase
+						font-weight: 500
+						color: black
+					p
+						margin-bottom: 10px
+						color: black
+		.col2
+			display: flex
+			flex-flow: row wrap
+			article
+				display: block
+				flex: 1 1 auto
+				width: calc(50% - 40px)
+				.text
+					width: 100%
+
 
 // ------------------------ @VIDEOS //////////////////////////////////
 
@@ -638,14 +666,18 @@ header
 	h2,
 	.dash
 		text-align: center
-
 	.dash
 		font-weight: 500
 		font-size: 5em
 	.dash.blue
 		color: $blue
+	p.subtitle
+		margin-bottom: 20px
+		font-size: 1.4em
+		text-align: center
 	iframe
 		width: 100%
+		margin-bottom: 40px
 #videos
 	margin-top: 20px
 	.flow
@@ -686,18 +718,23 @@ header
 	.flow
 		h2
 			text-align: center
+		.dash
+			font-weight: 500
+			text-align: center
+			font-size: 5em
+		.blue
+			color: $blue
 
+// ------------------------ @ATTACHMENTS //////////////////////////////////
 
-// ------------------------ @OPINION //////////////////////////////////
-
-#opinion.banner
-	margin-bottom: 0
-	padding-bottom: 10px
+#attachments.banner
+	padding-top: 10px
 	.flow
 		.content
 			display: flex
 			flex-flow: row wrap
 			justify-content: space-around
+			align-items: center
 			.col2.text
 				flex: 1 1 auto
 				width: calc(100% - 140px)
@@ -715,35 +752,7 @@ header
 			.col2.img
 				flex: 0 0 auto
 				width: 100px
-				margin-bottom: 20px
-
-// ------------------------ @ATTACHMENTS //////////////////////////////////
-
-#attachments.banner
-	padding-top: 10px
-	.flow
-		.content
-			display: flex
-			flex-flow: row wrap
-			justify-content: space-around
-			.col2.text
-				flex: 1 1 auto
-				width: calc(100% - 140px)
-				min-width: 250px
-				margin: 0 20px
-				color: #000000
-				p
-					margin-bottom: 10px
-					a
-						color: #000000
-						text-transform: uppercase
-						border-bottom: $blue solid 2px
-				p.important
-					font-weight: 500
-			.col2.img
-				flex: 0 0 auto
-				width: 60px
-				margin-bottom: 20px
+				margin: 10px 0
 
 // ------------------------ @LEGALPOINTS //////////////////////////////////
 
@@ -764,16 +773,16 @@ header
 			align-items: center
 			.colimg
 				flex: 1 1 auto
-				width: 20%
+				width: calc(20% - 40px)
 				margin: 20px
 				text-align: center
 				img
-					width: 100%
+					width: 60%
 					max-width: 60vw
 					height: auto
 			.coltext
 				flex: 1 1 auto
-				width: 520px
+				width: 600px
 				margin: 20px
 				h3
 				p
@@ -788,26 +797,26 @@ header
 					p
 						text-align: right
 
-
 // ------------------------ @CTA //////////////////////////////////
 
 #CTA-container
 	background-color: $blue
-	padding: 35px 0
+	padding: 35px 0 0
 	box-sizing: border-box
-
 	h2
-		margin-bottom: 35px
 		color: white
 		text-align: center
-
+	.dash
+		font-weight: 500
+		text-align: center
+		font-size: 5em
+		color: white
 		span
 			padding: 10px 20px
 			background-color: transparent
 			color: white
 			font-weight: bold
 			line-height: 1.7
-
 	article
 		display: inline-block
 		min-width: calc(100% / 4 - 4px)
@@ -816,26 +825,21 @@ header
 		vertical-align: top
 		text-align: center
 		margin-bottom: 50px
-		
 		.icone
 			display: block
 			margin-bottom: 10px
-			
 			img
 				width: 40%
 				height: auto
-		
 		.method
 			color: white
 			font-size: 1.4em
-			font-weight: 600
+			font-weight: 500
 			margin-bottom: 10px
-
 		.action
 			color: white
 			font-size: 1.4em
 			font-weight: 300
-
 			a
 				background-color: white
 				color: $blue
@@ -843,15 +847,21 @@ header
 				border-radius: 3px
 				font: 22px $hfont
 				text-transform: uppercase
-
 	#CTA
 		color: white
 
 #contacts
+	background-color: $blue
+	padding-top: 20px
 	.flow
 		h2
 			text-align: center
-			margin: 40px 0
+			color: white
+		.dash
+			font-weight: 500
+			text-align: center
+			font-size: 5em
+			color: white
 		article
 			display: inline-block
 			min-width: calc(100% / 3 - 3px)
@@ -860,29 +870,26 @@ header
 			vertical-align: top
 			text-align: center
 			margin-bottom: 50px
-			
 			.icone
 				display: block
 				margin-bottom: 10px
-				
+				display: none
 				img
 					width: 40%
 					height: auto
-			
 			.method
-				color: black
+				color: white
 				font-size: 1.4em
 				font-weight: 600
 				margin-bottom: 10px
-
 			.action
 				color: black
 				font-size: 1.4em
 				font-weight: 300
 
 				a
-					background-color: $MLD
-					color: white
+					background-color: white
+					color: $blue
 					padding: 0 15px
 					border-radius: 3px
 					font: 22px $hfont
