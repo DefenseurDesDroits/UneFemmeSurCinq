@@ -68,27 +68,45 @@ hr.clear
 	cursor: pointer
 	.bar
 		-webkit-transform: rotate(0) translateY(0) translateX(0)
+		-o-transform: rotate(0) translateY(0) translateX(0)
+		-moz-transform: rotate(0) translateY(0) translateX(0)
+		-ms-transform: rotate(0) translateY(0) translateX(0)
 		transform: rotate(0) translateY(0) translateX(0)
 		opacity: 1
 		-webkit-transform-origin: 20px 10px
+		-o-transform-origin: 20px 10px
+		-moz-transform-origin: 20px 10px
+		-ms-transform-origin: 20px 10px
 		transform-origin: 20px 10px
 		-webkit-transition: -webkit-transform 0.4s ease-in-out, opacity 0.2s ease-in-out
 		transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out
 	.bar:nth-of-type(1)
 		-webkit-transform-origin: 20px 10px
+		-o-transform-origin: 20px 10px
+		-moz-transform-origin: 20px 10px
+		-ms-transform-origin: 20px 10px
 		transform-origin: 20px 10px
 	.bar:nth-of-type(3)
 		-webkit-transform-origin: 20px 20px
+		-o-transform-origin: 20px 20px
+		-moz-transform-origin: 20px 20px
+		-ms-transform-origin: 20px 20px
 		transform-origin: 20px 20px
 .close
 	.svg-menu-toggle
 		.bar:nth-of-type(1)
 			-webkit-transform: rotate(-45deg) translateY(0) translateX(0)
+			-o-transform: rotate(-45deg) translateY(0) translateX(0)
+			-moz-transform: rotate(-45deg) translateY(0) translateX(0)
+			-ms-transform: rotate(-45deg) translateY(0) translateX(0)
 			transform: rotate(-45deg) translateY(0) translateX(0)
 		.bar:nth-of-type(2)
 			opacity: 0
 		.bar:nth-of-type(3)
 			-webkit-transform: rotate(45deg) translateY(0em) translateX(0em)
+			-o-transform: rotate(45deg) translateY(0em) translateX(0em)
+			-moz-transform: rotate(45deg) translateY(0em) translateX(0em)
+			-ms-transform: rotate(45deg) translateY(0em) translateX(0em)
 			transform: rotate(45deg) translateY(0em) translateX(0em)
 .inline-svg
 	display: block
@@ -112,6 +130,7 @@ hr.clear
 	background-color: $blue
 	display: flex
 	align-items: center
+	justify-content: center
 	#toplogo,
 	#tophashtag
 		display: none
@@ -125,19 +144,22 @@ hr.clear
 		width: 100%
 		#toplogo
 			display: block
+			position: fixed
+			z-index: 999
+			top: 0
+			left: -20px
 			color: transparent
 			font-size: 0
 			flex: 0 1 auto
-			width: 40px
+			width: 50px
 			margin: 0 20px
 			img
 				height: auto
-				width: 40px
+				width: 50px
 		#tophashtag
 			display: block
 			max-height: 20px
 			width: 50vw
-			margin-left: calc(25vw - 80px)
 			flex: 0 1 auto
 	#topbar.top
 		#toplogo,
@@ -179,7 +201,7 @@ hr.clear
 		max-width: 400px
 		padding: 20px
 		ul
-			margin-top: 70px
+			margin-top: 30px
 			li
 				font-size: 1.6em
 				text-transform: uppercase
@@ -194,7 +216,7 @@ hr.clear
 @media screen and (max-width: 800px)
 	#menu
 		width: 100%
-		background-color: rgba(0,128,201,1)
+		background-color: rgba(0,128,201,0.85)
 
 // ------------------------ @HEADER //////////////////////////////////
 
@@ -220,7 +242,7 @@ header
 		height: 100%
 		z-index: 2
 		box-sizing: border-box
-		padding: 25px 0
+		padding: 0 0 25px 0
 
 	.flow
 		height: 100%
@@ -234,11 +256,11 @@ header
 			color: transparent
 			font-size: 0
 			flex: 1 1 auto
-			width: 140px
+			width: 160px
 			img
 				height: auto
 				min-width: 30px
-				max-width: 140px
+				max-width: 160px
 		#hashtag
 			height: 20px
 			width: auto
@@ -563,8 +585,8 @@ header
 			font-weight: 500
 			text-align: center
 			font-size: 5em
-		.blue
-			color: $blue
+		.red
+			color: $MLD
 
 		.row
 			display: flex
@@ -596,7 +618,7 @@ header
 					a
 						color: #000000
 						text-transform: uppercase
-						border-bottom: $blue solid 2px
+						border-bottom: $MLD solid 2px
 
 		@media screen and (min-width: 800px)
 			.row.reverse
@@ -611,6 +633,7 @@ header
 // ------------------------ @JURY //////////////////////////////////
 
 #jury
+	padding: 0
 	.flow
 		h2,
 		.subtitle,
@@ -619,12 +642,14 @@ header
 			font-weight: 500
 		.dash
 			font-size: 5em
+		.blue
+			color: $blue
 		.content
 			margin: 0 0 40px
 			article
 				display: flex
 				flex-flow: row wrap
-				margin: 20px
+				margin: 20px 20px 40px
 				p.head
 					flex: 1 1 auto
 					text-align: center
@@ -647,6 +672,17 @@ header
 					p
 						margin-bottom: 10px
 						color: black
+					.review
+						display: flex
+						align-items: flex-start
+						.quote
+							flex: 0 0 auto
+							width: 50px
+							padding: 0 10px 0 0
+						.desc
+							flex: 1 1 auto
+							
+
 		.col2
 			display: flex
 			flex-flow: row wrap
@@ -661,7 +697,7 @@ header
 // ------------------------ @VIDEOS //////////////////////////////////
 
 #shortvideo
-	margin-top: 120px
+	margin-top: 60px
 	.flow
 	h2,
 	.dash
@@ -677,7 +713,7 @@ header
 		text-align: center
 	iframe
 		width: 100%
-		margin-bottom: 40px
+		margin-bottom: 20px
 #videos
 	margin-top: 20px
 	.flow
@@ -722,8 +758,8 @@ header
 			font-weight: 500
 			text-align: center
 			font-size: 5em
-		.blue
-			color: $blue
+		.red
+			color: $MLD
 
 // ------------------------ @ATTACHMENTS //////////////////////////////////
 
@@ -746,7 +782,7 @@ header
 					a
 						color: #000000
 						text-transform: uppercase
-						border-bottom: $blue solid 2px
+						border-bottom: $MLD solid 2px
 				p.important
 					font-weight: 500
 			.col2.img
@@ -852,7 +888,6 @@ header
 
 #contacts
 	background-color: $blue
-	padding-top: 20px
 	.flow
 		h2
 			text-align: center
@@ -880,7 +915,7 @@ header
 			.method
 				color: white
 				font-size: 1.4em
-				font-weight: 600
+				font-weight: 500
 				margin-bottom: 10px
 			.action
 				color: black
@@ -898,38 +933,41 @@ header
 // ------------------------ @FOOTER //////////////////////////////////
 
 footer
-	background-color: $gray
+	background-color: $blue
 	margin-top: 20px
-	padding: 40px 0
-	font-size: 120%
-
+	padding: 30px 0
 	nav
-		margin: 40px 0
-
 		ul
 			margin: 0 auto
-
+			display: flex
+			flex-flow: row wrap
+			align-items: center
+			justify-content: space-around
 			li
-				padding: 5px 10px
+				flex: 1 0 auto
+				text-align: center
+				padding: 5px
 				position: relative
 				display: inline-block
-				border-right: 1px solid black
 				border-collapse: collapse
-
 				img
 					display: none
-
 				a
-					color: black
+					color: white
 					text-decoration: none
-
-			li:last-of-type
-				border-right: none
-
+			#DDD,
 			#twit,
-			#fab
+			#fab,
+			#lkd
 				img
 					width: 30px
 					display: inline-block
 					margin-right: 5px
 					vertical-align: middle
+			#lkd
+				img
+					position: relative
+					top: -5px
+			@media screen and (max-width: 900px)
+				li
+					width: 100%
