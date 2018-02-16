@@ -15,10 +15,15 @@ function topBarToggle() {
 }
 
 function videoSizing() {
-  let vid = document.querySelector('#shortvideo iframe');
-  let vidw = vid.clientWidth;
-  let vidh = vidw * 9 / 16;
-  vid.style.height = vidh + 'px';
+  let vid1 = document.querySelector('#shortvideo iframe');
+  let vid1w = vid1.clientWidth;
+  let vid1h = vid1w * 9 / 16;
+  vid1.style.height = vid1h + 'px';
+
+  let vid2 = document.querySelector('#itw1-30 iframe');
+  let vid2w = vid2.clientWidth;
+  let vid2h = vid2w * 9 / 16;
+  vid2.style.height = vid2h + 'px';
 }
 
 document.querySelector('#menu .burger.close').addEventListener('click', activateBurger);
