@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/DefenseurDesDroits/UneFemmeSurCinq#readme",
   "dependencies": {
-    "node-sass": "^4.7.2",
+    "node-sass": "^4.8.3",
     "pug-cli": "^1.0.0-alpha6"
   },
   "devDependencies": {
